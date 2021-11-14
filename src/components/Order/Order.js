@@ -17,7 +17,6 @@ const Order = () => {
 
 
   const onSubmit = (data) => {
-    const max = "ram";
     data.email = user?.email;
     console.log(data.email);
     data.status = "pending";
