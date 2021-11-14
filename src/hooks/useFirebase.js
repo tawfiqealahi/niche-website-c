@@ -27,6 +27,7 @@ const useFirebase = () => {
         const redairect = location?.state?.from || "/";
         histroy.replace(redairect);
         setUser(result.user);
+        console.log(result.user);
         setError("");
       })
       .catch((error) => {
@@ -87,7 +88,7 @@ const useFirebase = () => {
   };
 
   const allUserRegisterData = (email) => {
-    fetch("https://nameless-inlet-61998.herokuapp.com/userData", {
+    fetch("http://localhost:5000/userData", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -97,19 +98,6 @@ const useFirebase = () => {
       .then((res) => res.json())
       .then((data) => {});
   };
-
-  // observe user state changed
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser({});
-      }
-      setIsloading(false);
-    });
-    return () => unsubscribe;
-  });
 
   return {
     user,

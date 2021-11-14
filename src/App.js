@@ -25,15 +25,15 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <PrivateRoute path="/dashboard">
+          <Route path="/dashboard">
             <Dashboard></Dashboard>
-          </PrivateRoute>
-          <PrivateRoute path="/allProducts">
+          </Route>
+          <Route path="/allProducts">
             <AllProducts></AllProducts>
-          </PrivateRoute>
-          <PrivateRoute path="/products/:id">
+          </Route>
+          <Route path="/products/:id">
             <Order></Order>
-          </PrivateRoute>
+          </Route>
           <Route path="/about">
             <OurAbout></OurAbout>
           </Route>
@@ -54,3 +54,5 @@ function App() {
 }
 
 export default App;
+
+

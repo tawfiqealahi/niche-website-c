@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
+// import useAuth from '../../hooks/useAuth';
+import useFirebase from '../../hooks/useFirebase';
 
 const Header = () => {
-    const {user, logOut} = useAuth();
+    const {user, logOut} = useFirebase();
     return (
         <div className="sticky-top">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,9 +29,13 @@ const Header = () => {
                         </li>
                     </ul>
                     </div>
-                    {user?.email ? <button onClick={logOut} className="btn btn-info px-5 py-2">LogOut</button>
-                    :
-                    <Link to="/logIn"><button className="btn btn-info px-5 py-2">LogIn</button></Link>}
+
+
+
+
+                    {user?.displayName ? ( <Link to="/"> <button onClick={logOut} className="btn btn-info px-5 py-2">LogOut</button> </Link>
+                    ) : (
+                    <Link to="/logIn"><button className="btn btn-info px-5 py-2">LogIn</button></Link>)}
                     <img style={{width: "40px"}} className="rounded-circle" src={user?.photoURL} alt="" />
                     <span>{user.displayName}</span>
                 </div>
