@@ -33,11 +33,11 @@ const Header = () => {
 
 
 
-                    {user?.displayName ? ( <Link to="/"> <button onClick={logOut} className="btn btn-info px-5 py-2">LogOut</button> </Link>
+                    {user?.email ? ( <Link to="/"> <button onClick={logOut} className="btn btn-info px-5 py-2">LogOut</button> </Link>
                     ) : (
                     <Link to="/logIn"><button className="btn btn-info px-5 py-2">LogIn</button></Link>)}
                     <img style={{width: "40px"}} className="rounded-circle" src={user?.photoURL} alt="" />
-                    <span>{user.displayName}</span>
+                    <span>{user.email}</span>
                 </div>
             </nav>
         </div>

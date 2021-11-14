@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
 import useFirebase from "../../../hooks/useFirebase";
 import MyOrder from "../../MyOrder/MyOrder";
 import AddProduct from "../AddProduct/AddProduct";

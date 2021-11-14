@@ -17,8 +17,9 @@ const Order = () => {
 
 
   const onSubmit = (data) => {
-    data.displayName = user?.displayName;
-    // console.log(data.email);
+    const max = "ram";
+    data.email = user?.email;
+    console.log(data.email);
     data.status = "pending";
     fetch("http://localhost:5000/addOrder", {
       method: "POST",
@@ -61,7 +62,7 @@ const Order = () => {
               <input
                 {...register("email")}
                 placeholder="Buyer Email Id"
-                defaultValue={user.displayName}
+                defaultValue={user.email}
                 className="p-2 m-2 w-100 input-field"
               />
               <input
