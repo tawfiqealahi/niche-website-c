@@ -23,7 +23,7 @@ const Footer = () => {
                         <h1 className="text-white">Newsletter</h1>
                         <p className="text-secondary">By subscribing to our company newsletter you will always be up-to-date on our latest promotions, deals and vehicle inventory!</p>
                         <input className="p-3" type="text" placeholder="Email" />
-                        <button className="btn btn-warning p-3 mt-2">SUBSCRIBE</button>
+                        <button className="btn btn-primary p-2 mt-2">SUBSCRIBE</button>
                     </div>
                 </div>
             </div>
