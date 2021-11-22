@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Products = () => {
-  
+
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("https://fierce-taiga-81798.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+  
   return (
     <div className="container my-5">
       <h1 className="text-center my-5">
