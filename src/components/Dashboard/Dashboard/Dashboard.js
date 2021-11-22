@@ -11,13 +11,13 @@ import Pay from "../Pay/Pay";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-  const {user } = useFirebase();
+  const { user } = useFirebase();
   const { url, path } = useRouteMatch();
 
   // const { user } = useAuth();
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
-    fetch(`http://localhost:5000/admin/${user?.email}`)
+    fetch(`https://fierce-taiga-81798.herokuapp.com/admin/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         if (data[0]?.role === "admin") {

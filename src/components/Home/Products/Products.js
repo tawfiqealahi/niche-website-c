@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://fierce-taiga-81798.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -25,11 +25,11 @@ const Products = () => {
               </div>
               <Link to="/allProducts">
                 <div className="text-center p-3">
-                <Link to={`/products/${product._id}`}>
-                <div className="text-center p-3">
-                  <button className="btn btn-info">Buy Now</button>
-                </div>
-              </Link>
+                  <Link to={`/products/${product._id}`}>
+                    <div className="text-center p-3">
+                      <button className="btn btn-info">Buy Now</button>
+                    </div>
+                  </Link>
                 </div>
               </Link>
             </div>

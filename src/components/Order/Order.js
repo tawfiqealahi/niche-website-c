@@ -15,12 +15,11 @@ const Order = () => {
     formState: { errors },
   } = useForm();
 
-
   const onSubmit = (data) => {
     data.email = user?.email;
     console.log(data.email);
     data.status = "pending";
-    fetch("http://localhost:5000/addOrder", {
+    fetch("https://fierce-taiga-81798.herokuapp.com/addOrder", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -37,7 +36,7 @@ const Order = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://fierce-taiga-81798.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((result) => setProduct(result));
   }, [id]);

@@ -3,6 +3,7 @@ import banner from '../../../images/banner,,2.jpg';
 import './TopBanner.css';
 
 const TopBanner = () => {
+    
     return (
         <div>
             <div className="card bg-dark text-white banner">
