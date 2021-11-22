@@ -27,11 +27,12 @@ const Products = () => {
               <Link to="/allProducts">
                 <div className="text-center p-3">
                   <Link to={`/products/${product._id}`}>
+                    
                     <div className="text-center p-3">
                       <button className="btn btn-info">Buy Now</button>
 
                     </div>
-                    
+
                   </Link>
                 </div>
               </Link>
