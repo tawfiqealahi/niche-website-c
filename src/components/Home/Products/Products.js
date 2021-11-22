@@ -9,12 +9,11 @@ const Products = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
-  
+
   return (
     <div className="container my-5">
       <h1 className="text-center my-5">
-        <strong>BROWSE</strong> MODELS
-      </h1>
+        <strong>BROWSE</strong> MODELS</h1>
       <div className="row">
         {products.slice(0, 6).map((product) => (
           <div key={product._id} className="col-md-4 mt-5">
