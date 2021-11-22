@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Products = () => {
+  
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("https://fierce-taiga-81798.herokuapp.com/products")
